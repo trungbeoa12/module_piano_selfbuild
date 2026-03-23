@@ -5,18 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piano studio — module tự tải | Piano Vinh Quang</title>
     <link rel="stylesheet" href="css/piano-page.css">
+    <link rel="stylesheet" href="css/score-viewer.css">
 </head>
 <body class="pvq-piano-studio-page">
     <div class="pvq-piano-studio-shell">
         <a class="pvq-piano-back" href="#">← Về trang chủ (chỉnh href)</a>
         <h1>Demo trang đầy đủ (cùng cơ chế nhúng)</h1>
         <p class="pvq-piano-studio-lead">
-            Trang này chỉ cần <code>css/piano-page.css</code> + <code>piano-loader.js</code>.
-            Loader sẽ tự thêm font, <code>css/piano-widget.css</code>, fragment HTML và các script trong <code>js/</code>.
+            Trang này dùng <code>css/piano-page.css</code> + <code>piano-loader.js</code> cho piano;
+            phần bản nhạc tải file <code>.musicxml</code> trong <code>assets/scores/</code> (cần mở qua HTTP, không dùng file://).
         </p>
+
+        <section class="pvq-score-section" aria-label="Bản nhạc">
+            <div class="pvq-score-section-heading">
+                <div>
+                    <h2>Bản nhạc (MusicXML)</h2>
+                    <p class="pvq-score-hint">
+                        File mẫu: <code>assets/scores/test-score.musicxml</code> — thay bằng file export từ MuseScore khi cần.
+                    </p>
+                </div>
+                <div class="pvq-score-chip">OpenSheetMusicDisplay</div>
+            </div>
+            <div class="pvq-score-shell">
+                <div class="pvq-score-stage">
+                    <div id="pvq-score-container"></div>
+                </div>
+            </div>
+        </section>
 
         <div id="pvq-piano-mount"></div>
     </div>
+
+    <!-- VexFlow 1.x (peer của OSMD 1.8) — phải trước OSMD -->
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@1.2.93/releases/vexflow-debug.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.8.9/build/opensheetmusicdisplay.min.js" defer></script>
+    <script src="js/score/score-loader.js" defer></script>
+    <script src="js/score/score-renderer.js" defer></script>
+    <script src="js/score/studio-score-init.js" defer data-score-url="assets/scores/test-score.musicxml"></script>
 
     <script src="piano-loader.js" data-mount="#pvq-piano-mount" defer></script>
 </body>

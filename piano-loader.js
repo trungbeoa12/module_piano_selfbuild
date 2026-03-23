@@ -1,5 +1,7 @@
 /**
  * piano-loader.js — Điểm vào duy nhất để nhúng module vào site khác.
+ * Hiện tại file này chỉ nhúng piano widget; score viewer đang sống riêng ở piano-studio.html.
+ * Nếu sau này cần embed cả score, có thể mở rộng loader để mount thêm vùng score và nhận data-score-url.
  *
  * Cách dùng (đặt mount TRƯỚC script, hoặc dùng defer):
  *   <div id="pvq-piano-mount"></div>

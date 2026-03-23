@@ -26,6 +26,32 @@
                 </div>
                 <div class="pvq-score-chip">OpenSheetMusicDisplay</div>
             </div>
+            <div class="pvq-score-toolbar" aria-label="Điều khiển chọn ô nhịp">
+                <p class="pvq-score-selection-text" data-pvq-role="score-selection-text">
+                    Chọn ô nhịp trên bản nhạc để tạo vùng luyện tập.
+                </p>
+                <button type="button" class="pvq-score-clear-btn" data-pvq-role="score-clear-btn" disabled>
+                    Xóa chọn
+                </button>
+            </div>
+            <div class="pvq-score-playback" aria-label="Điều khiển phát bản nhạc">
+                <div class="pvq-score-playback-group">
+                    <button type="button" class="pvq-score-play-btn" data-pvq-role="score-play-btn" disabled>
+                        Play
+                    </button>
+                    <button type="button" class="pvq-score-stop-btn" data-pvq-role="score-stop-btn" disabled>
+                        Stop
+                    </button>
+                </div>
+                <label class="pvq-score-speed" for="pvq-score-speed-slider">
+                    <span>Tốc độ đọc</span>
+                    <input id="pvq-score-speed-slider" type="range" min="0.6" max="1.6" step="0.1" value="1" data-pvq-role="score-speed-slider">
+                    <span class="pvq-score-speed-value" data-pvq-role="score-speed-value">1.0x</span>
+                </label>
+                <p class="pvq-score-playback-text" data-pvq-role="score-playback-text">
+                    Đang chuẩn bị playback cho sheet nhạc.
+                </p>
+            </div>
             <div class="pvq-score-shell">
                 <div class="pvq-score-stage">
                     <div id="pvq-score-container"></div>

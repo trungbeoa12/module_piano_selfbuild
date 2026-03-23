@@ -21,3 +21,11 @@ Không thêm js/piano/piano-practice.js khi đã dùng piano-loader.js.
 
 Thủ công (không dùng loader): gắn piano-lessons + audio-engine + piano-keyboard + piano-player + piano-practice,
 và chèn HTML giống piano-widget.partial.html vào trang; kèm css/piano-widget.css.
+
+Ghi chú score:
+- File score chuẩn đặt trong `assets/scores/`.
+- Script score chuẩn đặt trong `js/score/`.
+- Hiện tại score viewer chỉ dùng trên `piano-studio.html`.
+- `piano-loader.js` hiện chỉ nhúng piano widget, chưa nhúng score viewer.
+- Nếu sau này cần embed cả score + piano, sẽ mở rộng loader bằng thuộc tính kiểu `data-score-url` và nạp thêm OSMD + `js/score/`.
+- Thư mục `sheet_piano/` là thư mục cũ (legacy), không dùng cho flow hiện tại trừ khi đang tham chiếu dữ liệu cũ.

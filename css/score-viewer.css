@@ -95,7 +95,7 @@
 
 .pvq-score-playback {
 	display: grid;
-	grid-template-columns: auto minmax(210px, 260px) minmax(220px, 1fr);
+	grid-template-columns: auto minmax(210px, 260px) auto minmax(220px, 1fr);
 	align-items: center;
 	gap: 16px;
 	margin-bottom: 16px;
@@ -167,6 +167,20 @@
 	text-align: right;
 	font-weight: 600;
 	color: #f8fbff;
+}
+
+.pvq-score-loop-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	color: #d6dced;
+	font-size: 0.88rem;
+	cursor: pointer;
+	user-select: none;
+}
+
+.pvq-score-loop-toggle input {
+	accent-color: #a8bbe6;
 }
 
 .pvq-score-playback-text {

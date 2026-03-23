@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano studio — module tự tải | Piano Vinh Quang</title>
+    <link rel="stylesheet" href="css/piano-page.css">
+</head>
+<body class="pvq-piano-studio-page">
+    <div class="pvq-piano-studio-shell">
+        <a class="pvq-piano-back" href="#">← Về trang chủ (chỉnh href)</a>
+        <h1>Demo trang đầy đủ (cùng cơ chế nhúng)</h1>
+        <p class="pvq-piano-studio-lead">
+            Trang này chỉ cần <code>css/piano-page.css</code> + <code>piano-loader.js</code>.
+            Loader sẽ tự thêm font, <code>css/piano-widget.css</code>, fragment HTML và các script trong <code>js/</code>.
+        </p>
+
+        <div id="pvq-piano-mount"></div>
+    </div>
+
+    <script src="piano-loader.js" data-mount="#pvq-piano-mount" defer></script>
+</body>
+</html>

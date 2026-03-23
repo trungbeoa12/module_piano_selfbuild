@@ -1,0 +1,23 @@
+NHÚNG MODULE PIANO VÀO WEBSITE KHÁC
+==================================
+
+1) Copy nguyên folder `module_piano_self_build` vào project (vd: public/module_piano_self_build/).
+
+2) Trên trang HTML, thêm vùng mount + một thẻ script:
+
+   <div id="pvq-piano-mount"></div>
+   <script src="/module_piano_self_build/piano-loader.js"
+           data-mount="#pvq-piano-mount" defer></script>
+
+   (Đổi src cho khớp đường dẫn thật trên server.)
+
+3) Mở trang qua HTTP (localhost hoặc deploy). File:// thường chặn fetch partial.
+
+Tùy chọn trên thẻ script:
+- data-base="https://site.com/static/module_piano_self_build/"  — nếu script không nằm cùng folder với module
+- data-no-fonts="true"  — bỏ qua Google Fonts nếu site đã import Outfit + Cormorant
+
+Không thêm js/piano/piano-practice.js khi đã dùng piano-loader.js.
+
+Thủ công (không dùng loader): gắn piano-lessons + audio-engine + piano-keyboard + piano-player + piano-practice,
+và chèn HTML giống piano-widget.partial.html vào trang; kèm css/piano-widget.css.

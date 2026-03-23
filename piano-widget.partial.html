@@ -1,0 +1,58 @@
+<!-- Fragment tải bởi piano-loader.js — bọc .pvq-piano-module để CSS scoped -->
+<div class="pvq-piano-module">
+<div
+    class="mini-player pvq-piano-widget"
+    data-pvq-piano-root
+>
+    <div class="song-selector">
+        <button type="button" class="song-tab active" data-pvq-role="song-tab" data-song="0">Luyện ngón căn bản</button>
+        <button type="button" class="song-tab" data-pvq-role="song-tab" data-song="1">Giai điệu căn bản</button>
+        <button type="button" class="song-tab" data-pvq-role="song-tab" data-song="2">Bản nhạc ứng dụng</button>
+    </div>
+
+    <div class="player-header">
+        <div class="song-info">
+            <div class="now-playing">Đang phát</div>
+            <div class="song-title" data-pvq-role="song-title">Luyện ngón căn bản</div>
+        </div>
+        <div class="player-controls">
+            <button type="button" class="control-btn nav-btn" data-pvq-role="prev-btn" aria-label="Bài trước">‹</button>
+            <button type="button" class="control-btn play-btn" data-pvq-role="play-btn" aria-label="Phát hoặc tạm dừng">▶</button>
+            <button type="button" class="control-btn nav-btn" data-pvq-role="next-btn" aria-label="Bài sau">›</button>
+        </div>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress-fill" data-pvq-role="progress-fill"></div>
+        </div>
+        <div class="time-display">
+            <span data-pvq-role="current-time">0:00</span>
+            <span data-pvq-role="total-time">0:00</span>
+        </div>
+    </div>
+
+    <div class="mini-piano-container">
+        <div class="mini-piano" data-pvq-role="mini-piano"></div>
+    </div>
+
+    <div class="player-controls-row">
+        <div class="control-group speed-control">
+            <span class="control-label">Tốc độ</span>
+            <input type="range" class="control-slider" data-pvq-role="speed-slider" min="0.5" max="2" step="0.1" value="1">
+            <span class="control-value" data-pvq-role="speed-value">1.0x</span>
+        </div>
+        <div class="control-group">
+            <span class="control-label">Âm lượng</span>
+            <input type="range" class="control-slider" data-pvq-role="volume-slider" min="0" max="1" step="0.05" value="0.7">
+            <span class="control-value" data-pvq-role="volume-value">70%</span>
+        </div>
+        <div class="repeat-toggle" data-pvq-role="repeat-toggle" role="button" tabindex="0" aria-label="Lặp lại bài">
+            <span class="repeat-icon" aria-hidden="true">🔁</span>
+            <div class="toggle-switch" data-pvq-role="repeat-switch"></div>
+        </div>
+    </div>
+
+    <p class="keyboard-hint">Phím máy tính: Z–M (quãng thấp) · Q–U (quãng cao) · Space (phát / dừng)</p>
+</div>
+</div>

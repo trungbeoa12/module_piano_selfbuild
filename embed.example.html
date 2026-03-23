@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ nhúng piano vào trang host</title>
+</head>
+<body style="font-family: system-ui; padding: 24px; background: #eee;">
+    <h1>Trang host (giả lập)</h1>
+    <p>Chỉ cần copy nguyên folder <code>module_piano_self_build</code> vào static của bạn, rồi chỉnh <code>src</code> cho đúng đường dẫn.</p>
+
+    <!-- Vùng nhúng: đặt ở bất kỳ đâu trong layout -->
+    <div id="pvq-piano-mount"></div>
+
+    <!-- Đường dẫn tương đối = vị trí folder sau khi copy (ví dụ /assets/module_piano_self_build/) -->
+    <script src="./piano-loader.js" data-mount="#pvq-piano-mount" defer></script>
+</body>
+</html>

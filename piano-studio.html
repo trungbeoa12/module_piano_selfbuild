@@ -13,7 +13,7 @@
         <h1>Demo trang đầy đủ (cùng cơ chế nhúng)</h1>
         <p class="pvq-piano-studio-lead">
             Trang này dùng <code>css/piano-page.css</code> + <code>piano-loader.js</code> cho piano;
-            phần bản nhạc tải file <code>.musicxml</code> trong <code>assets/scores/</code> (cần mở qua HTTP, không dùng file://).
+            phần score+audio tải cặp <code>.mxl</code> + <code>.mid</code> export từ MuseScore (cần mở qua HTTP, không dùng file://).
         </p>
 
         <section class="pvq-score-section" aria-label="Bản nhạc">
@@ -21,7 +21,7 @@
                 <div>
                     <h2>Bản nhạc (MusicXML)</h2>
                     <p class="pvq-score-hint">
-                        File mẫu: <code>assets/scores/test-score.musicxml</code> — thay bằng file export từ MuseScore khi cần.
+                        Score: <code>assets/scores/waltz-in-a-minorchopin.mxl</code> · MIDI: <code>sheet_piano/waltz-in-a-minorchopin.mid</code>
                     </p>
                 </div>
                 <div class="pvq-score-chip">OpenSheetMusicDisplay</div>
@@ -69,11 +69,18 @@
     <!-- VexFlow 1.x (peer của OSMD 1.8) — phải trước OSMD -->
     <script src="https://cdn.jsdelivr.net/npm/vexflow@1.2.93/releases/vexflow-debug.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.8.9/build/opensheetmusicdisplay.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tonejs/midi@2.0.28/build/Midi.min.js" defer></script>
     <script src="js/score/score-loader.js" defer></script>
     <script src="js/score/score-view.js" defer></script>
+    <script src="js/score/score-sync-cache.js" defer></script>
     <script src="js/score/playback-engine.js" defer></script>
     <script src="js/score/score-controller.js" defer></script>
-    <script src="js/score/studio-score-init.js" defer data-score-url="assets/scores/test-score.musicxml"></script>
+    <script
+      src="js/score/studio-score-init.js"
+      defer
+      data-score-url="assets/scores/waltz-in-a-minorchopin.mxl"
+      data-midi-url="sheet_piano/waltz-in-a-minorchopin.mid"
+    ></script>
 
     <script src="piano-loader.js" data-mount="#pvq-piano-mount" defer></script>
 </body>

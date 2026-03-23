@@ -18,7 +18,21 @@
     });
   }
 
+  /**
+   * @param {string} url — Đường dẫn tới file nhị phân (.mxl, .mid)
+   * @returns {Promise<ArrayBuffer>}
+   */
+  function loadArrayBufferFromUrl(url) {
+    return fetch(url).then(function (r) {
+      if (!r.ok) {
+        throw new Error('Không tải được file: HTTP ' + r.status + ' — ' + url);
+      }
+      return r.arrayBuffer();
+    });
+  }
+
   window.PVQ_ScoreLoader = {
     loadFromUrl: loadFromUrl,
+    loadArrayBufferFromUrl: loadArrayBufferFromUrl,
   };
 })();
